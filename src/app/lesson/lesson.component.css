@@ -1,0 +1,36 @@
+.add-task-btn {
+    width: 50%;
+    display: block;
+    margin: 1em auto;
+
+}
+li {
+    list-style-type: none;
+    padding: 10px;
+    border:1px solid lightblue;
+    border-radius: 3px;
+    margin-top: -1px;
+}
+ul {
+    padding: 0;
+}
+
+.btn-info {
+    float:right;
+    margin-left: 5px;
+}
+.btn-danger {
+    float: right;
+}
+.save-btn {
+    width: 30%;
+    display: block;
+    margin: auto;
+    margin-top: 5px;
+}
+h1 {
+    font-family: 'MedievalSharp', cursive;
+}
+div {
+    font-family: 'tahoma', cursive;
+}

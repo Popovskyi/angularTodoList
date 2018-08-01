@@ -1,0 +1,31 @@
+<h1 class="text-center">Angular Todo List</h1>
+<input class="form-control" type="text" [(ngModel)]="name" placeholder="add new task">
+<button (click)="addTask(name, false, true, false)" class="btn btn-primary add-task-btn">Add new task</button>
+<div class="row">
+  <div class="col-md-12 ">
+    <ul>
+      <li *ngFor="let task of toDos; let i = index; "  [class.done_task]="task.taskIsDone" >
+    <div *ngIf="task.taskOnEdit">
+      <button (click)="doneTask(task, i); task.taskIsDone = !task.taskIsDone" class="btn btn-success">OK</button>
+      {{task.name}}
+      <button (click)="editThisTask(task)" class="btn btn-info">EDIT</button>
+      <button (click)="deleteThisTask(i)" class="btn btn-danger">DELETE</button>
+    </div>
+        <span *ngIf="task.editTask">
+      <input type="text"  [(ngModel)]="task.name" class="form-control" placeholder="edit your task"/>
+      <button (click)="saveTask(task)" class="btn btn-primary save-btn"> SAVE </button>
+    </span>
+      </li>
+    </ul>
+
+    <div class="list-group">
+    <ul>
+      <h3>Completed tasks</h3>
+      <li class="completed-tasks list-group-item list-group-item-action list-group-item-success" *ngFor="let completeTask of completeTasks; let i = index">
+        {{completeTask.name}}
+      </li>
+    </ul>
+  </div>
+  </div>
+</div>
+
