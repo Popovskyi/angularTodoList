@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TodoListClass } from '../todoListClass';
 
+
 @Component({
   selector: 'app-lesson',
   templateUrl: './lesson.component.html',
@@ -13,6 +14,7 @@ export class LessonComponent implements OnInit {
   taskIsDone: boolean;
   toDos: any[];
   completeTasks: any[];
+    search: any;
     constructor()   {
     this.name = '';
     this.toDos = [];

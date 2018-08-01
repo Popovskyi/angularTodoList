@@ -3,11 +3,15 @@ import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { LessonComponent } from './lesson/lesson.component';
+import {ReverseStr} from './search-str.pipe';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    LessonComponent
+    LessonComponent,
+    ReverseStr
+
   ],
   imports: [
     BrowserModule,
